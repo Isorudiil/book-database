@@ -51,7 +51,6 @@ def add_csv():
         for row in data:
             book_in_db = session.query(Book).filter(Book.title==row[0]).one_or_none()
             if book_in_db == None:
-                print(row)
                 title = row[0]
                 author = row[1]
                 date = clean_date(row[2])
